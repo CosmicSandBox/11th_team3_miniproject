@@ -34,9 +34,9 @@ function App() {
               <Route path="/Join" element={<Join />} />
               <Route path="/AvatarStart" element={<AvatarStart />} />
               <Route path="/Avatar" element={<Avatar />} />
-              {/* <Route path="/" element={<GuestHome />} />  */}
-              {/* <Route path="/" element={<AftLogin />} /> */}
-              {/* <Route path="/" element={<GuestHome />} /> */}
+              <Route path="/" element={<GuestHome />} />
+              <Route path="/" element={<AftLogin />} />
+              <Route path="/" element={<GuestHome />} />
             </Routes>
           </div>
         </ThemeProvider>
