@@ -13,6 +13,10 @@
   src: url("//cdn.df.nexon.com/img/common/font/DNFBitBit-Regular.woff"),
     url("//cdn.df.nexon.com/img/common/font/DNFBitBit-Regular.woff2");
 }
+.wrapper {
+  width: 1440px;
+  height: 900px;
+}
 
 .background {
   position: relative;
@@ -28,25 +32,25 @@
   display: flex;
   margin: 0;
   padding: 0;
-  min-height: 17vh;
-  left: calc(40% - 240px / 2);
-  top: 7%;
+  min-height: 8vh;
+  left: calc(48% - 240px / 2);
+  top: 13%;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .loginID {
   position: absolute;
   left: 25%;
-  top: 25%;
+  top: 27%;
 
   color: #fff;
   font-family: DNF Bit Bit TTF;
-  font-size: 100px;
+  font-size: 40px;
   font-style: normal;
-  font-weight: 1000;
   line-height: normal;
 
-  text-shadow: -5px 0 #15321c, 0 5px #15321c, 5px 0 #15321c, 0 -5px #15321c;
+  text-shadow: -1.5px 0 #15321c, 0 1.5px #15321c, 1.5px 0 #15321c,
+    0 -1.5px #15321c;
   margin: 0;
   padding: 0;
 }
@@ -55,8 +59,8 @@
   position: absolute;
   display: flex;
   left: 25%;
-  top: 30%;
-  width: 50vw;
+  top: 33%;
+  width: 45vw;
   height: 5vh;
 
   background: #ffe9ea;
@@ -64,7 +68,7 @@
 
   font-family: "PFStardust";
   font-style: normal;
-  font-size: 50px;
+  font-size: 20px;
   color: #000000;
 
   margin: 0;
@@ -75,15 +79,15 @@
 .loginPW {
   position: absolute;
   left: 25%;
-  top: 40%;
+  top: 41%;
 
   color: #fff;
   font-family: DNF Bit Bit TTF;
-  font-size: 100px;
+  font-size: 40px;
   font-style: normal;
-  font-weight: 1000;
   line-height: normal;
-  text-shadow: -5px 0 #15321c, 0 5px #15321c, 5px 0 #15321c, 0 -5px #15321c;
+  text-shadow: -1.5px 0 #15321c, 0 1.5px #15321c, 1.5px 0 #15321c,
+    0 -1.5px #15321c;
   margin: 0;
   padding: 0;
 }
@@ -92,8 +96,8 @@
   position: absolute;
   display: flex;
   left: 25%;
-  top: 45%;
-  width: 50vw;
+  top: 47%;
+  width: 45vw;
   height: 5vh;
 
   background: #ffe9ea;
@@ -101,7 +105,7 @@
   font-family: "PFStardust";
   font-style: normal;
 
-  font-size: 50px;
+  font-size: 20px;
   color: #000000;
 
   margin: 0;
@@ -113,9 +117,9 @@
   position: absolute;
   display: flex;
   justify-content: center;
-  left: 30%;
-  width: 40vw;
-  height: 7vh;
+  left: calc(45% - 240px / 2);
+  width: calc(45vh * 0.85);
+  height: calc(9vh * 0.85);
   top: 57%;
 }
 
@@ -123,13 +127,12 @@
   position: absolute;
   display: flex;
   justify-content: center;
-  left: 30%;
-  width: 40vw;
-  bottom: 20%;
+  left: calc(50% - 240px / 2);
+  top: 75%;
 
   font-family: "PFStardust";
   font-style: normal;
-  font-size: 50px;
+  font-size: 20px;
 
   color: #000000;
   margin: 0;
@@ -140,37 +143,37 @@
   position: absolute;
   display: flex;
   justify-content: center;
-  left: 30%;
-  width: 40vw;
-  height: 7vh;
+  left: calc(45% - 240px / 2);
+  width: calc(45vh * 0.85);
+  height: calc(9vh * 0.85);
   bottom: 10%;
 }
 
 .loginErrorID {
   position: absolute;
   display: flex;
-  left: 33%;
-  top: 25%;
+  left: 35%;
+  top: 26.5%;
   width: 50vw;
   height: 5vh;
 
   font-family: "PFStardust";
   font-style: normal;
-  font-size: 50px;
+  font-size: 20px;
   color: #b45f66;
 }
 
 .loginErrorPW {
   position: absolute;
   display: flex;
-  left: 33%;
-  top: 40%;
-  width: 50vw;
+  left: 35%;
+  top: 41%;
+  width: 70vw;
   height: 5vh;
 
   font-family: "PFStardust";
   font-style: normal;
-  font-size: 50px;
+  font-size: 20px;
   color: #b45f66;
 }
 

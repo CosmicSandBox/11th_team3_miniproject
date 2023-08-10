@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import loginHead from "src/assets/images/loginHead.png";
-import LoginButton from "src/assets/images/loginButton.png";
-import JoinButton from "src/assets/images/joinButton.png";
+import LoginButton from "src/assets/images/join/Login.png";
+import JoinButton from "src/assets/images/join/Join.png";
 import "src/style/Login/Login.css";
 import { Link } from "react-router-dom";
 import axios from "axios";
@@ -10,6 +10,7 @@ import axios from "axios";
 const User = {
   email: "likelion@naver.com",
   pw: "likelion123",
+  birth: "0101",
 };
 
 function Login() {
@@ -58,52 +59,60 @@ function Login() {
   }, [emailValid, pwValid]);
 
   return (
-    <div className="background">
-      <img src={loginHead} className="loginHead" alt="고양이둘"></img>
+    <div className="wrapper">
+      <div className="background">
+        <img src={loginHead} className="loginHead" alt="고양이둘"></img>
 
-      <p className="loginID">ID</p>
-      <input
-        type="text"
-        className="loginbox"
-        placeholder="   메일 주소를 입력해주세요!"
-        value={email}
-        onChange={handleEmail}
-      />
-      <div className="loginErrorID">
-        {!emailValid && email.length > 0 && (
-          <div>올바른 이메일을 입력해주세요!</div>
-        )}
-      </div>
-      {/* 비밀번호 안보이게 변경하기 
+        <p className="loginID">ID</p>
+        <input
+          type="text"
+          className="loginbox"
+          placeholder="   메일 주소를 입력해주세요!"
+          value={email}
+          onChange={handleEmail}
+        />
+        <div className="loginErrorID">
+          {!emailValid && email.length > 0 && (
+            <div>올바른 이메일을 입력해주세요!</div>
+          )}
+        </div>
+        {/* 비밀번호 안보이게 변경하기 
 숫자와 문자 포함 형태의 6~12자리 이내의 암호 정규식*/}
 
-      <p className="loginPW">PW</p>
-      <input
-        type="password"
-        className="loginPwBox"
-        placeholder="   비밀번호를 입력해주세요!"
-        value={pw}
-        onChange={handlePassword}
-      />
-      <div className="loginErrorPW">
-        {!pwValid && pw.length > 0 && (
-          <div>숫자와 문자를 포함한 6~12자리를 입력해주세요!</div>
-        )}
-      </div>
-      <Link to="/AvatarStart">
-        <img
-          onClick={onClickConfirmButton}
-          disabled={notAllow}
-          src={LoginButton}
-          className="LoginButton"
-          alt="LoginButton"
+        <p className="loginPW">PW</p>
+        <input
+          type="password"
+          className="loginPwBox"
+          placeholder="   비밀번호를 입력해주세요!"
+          value={pw}
+          onChange={handlePassword}
         />
-      </Link>
-      <p className="askMemberYet">아직 회원이 아니신가요?</p>
+        <div className="loginErrorPW">
+          {!pwValid && pw.length > 0 && (
+            <div>숫자와 문자를 포함한 6~12자리를 입력해주세요!</div>
+          )}
+        </div>
+        <div>
+          <Link to="/AvatarStart">
+            <img
+              onClick={onClickConfirmButton}
+              disabled={notAllow}
+              src={LoginButton}
+              className="LoginButton"
+              alt="LoginButton"
+            />
+          </Link>
+          <p className="askMemberYet">아직 회원이 아니신가요?</p>
 
-      <Link to="/Join">
-        <img src={JoinButton} className="JoinButton" alt="회원 가입하러가기" />
-      </Link>
+          <Link to="/Join">
+            <img
+              src={JoinButton}
+              className="JoinButton"
+              alt="회원 가입하러가기"
+            />
+          </Link>
+        </div>
+      </div>
     </div>
   );
 }
